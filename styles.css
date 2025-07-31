@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #2d3436;
+    --secondary-color: #636e72;
+    --accent-lila: #c4a1ff;
+    --accent-rosa: #ffb6c1;
+    --bg-color: #fff5f7;
+    --card-color: #ffffff;
+    --text-dark: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: radial-gradient(circle at 10% 20%, rgba(255, 182, 193, 0.1) 0%, rgba(196, 161, 255, 0.1) 90%);
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-dark);
+}
+
+h1 .math-part {
+    color: var(--accent-lila);
+    font-style: italic;
+}
+
+.result {
+    background-color: var(--card-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.time-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.time-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.time-value {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--accent-lila);
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.time-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.time-unit:hover .time-value {
+    color: var(--accent-rosa);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .time-row {
+        gap: 1rem;
+    }
+    
+    .time-unit {
+        min-width: 80px;
+    }
+    
+    .time-value {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .result {
+        padding: 1.5rem;
+    }
+    
+    .time-row {
+        flex-wrap: wrap;
+    }
+    
+    .time-value {
+        font-size: 1.8rem;
+    }
+    
+    .time-label {
+        font-size: 0.8rem;
+    }
+}
